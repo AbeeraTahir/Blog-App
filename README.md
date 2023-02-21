@@ -3,7 +3,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Blog App ](#-blog-app-)
+- [📖 Blog App ](#blog-app)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -86,7 +86,7 @@ Clone this repository to your desired folder:
 
 ### Install
 
-Install thr project dependencies with:
+Install the project dependencies with:
 
 ```
   - bundle install
