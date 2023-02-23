@@ -1,8 +1,10 @@
-require_relative './rails_helper.rb'
+require_relative './rails_helper'
 
 RSpec.describe Post, type: :model do
-  subject { Post.new(title: 'AI', text: 'Great post', comments_counter: 1, likes_counter: 1,
-  author_id: 7) }
+  subject do
+    Post.new(title: 'AI', text: 'Great post', comments_counter: 1, likes_counter: 1,
+             author_id: 7)
+  end
 
   before { subject.save }
 

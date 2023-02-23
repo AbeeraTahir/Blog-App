@@ -1,4 +1,4 @@
-require_relative './rails_helper.rb'
+require_relative './rails_helper'
 
 RSpec.describe User, type: :model do
   subject { User.new(name: 'Rose', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Doctor', posts_counter: 1) }

@@ -1,9 +1,9 @@
-require_relative './rails_helper.rb'
+require_relative './rails_helper'
 
 RSpec.describe Comment, type: :model do
   user = User.create(name: 'Bob', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher', posts_counter: 0)
   post = Post.create(title: 'Bio', text: 'Amazing post', comments_counter: 0, likes_counter: 0, author: user)
-  subject { Comment.new(text: 'Hi', author: user, post: post) }
+  subject { Comment.new(text: 'Hi', author: user, post:) }
 
   before { subject.save }
 
