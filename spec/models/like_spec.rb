@@ -1,4 +1,4 @@
-require_relative './rails_helper'
+require_relative '../rails_helper'
 
 RSpec.describe Like, type: :model do
   user = User.create(name: 'Bob', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher', posts_counter: 0)
