@@ -13,12 +13,12 @@ RSpec.describe 'UsersController', type: :request do
     end
 
     it 'response body includes correct placeholder text' do
-      expect(response.body).to include('List of users')
+      expect(response.body).to include('List of users:')
     end
   end
 
   describe 'GET #show' do
-    before(:example) { get user_path(id: 10) }
+    before(:example) { get user_path(id: 316) }
 
     it 'returns http success status' do
       expect(response).to have_http_status(:ok)
@@ -29,7 +29,7 @@ RSpec.describe 'UsersController', type: :request do
     end
 
     it 'response body includes correct placeholder text' do
-      expect(response.body).to include('User')
+      expect(response.body).to include('Bio')
     end
   end
 end

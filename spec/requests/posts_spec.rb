@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'PostsController', type: :request do
   describe 'GET #index' do
-    before(:example) { get user_posts_path(user_id: 10) }
+    before(:example) { get user_posts_path(user_id: 316) }
 
     it 'returns http success status' do
       expect(response).to have_http_status(:ok)
@@ -13,12 +13,12 @@ RSpec.describe 'PostsController', type: :request do
     end
 
     it 'response body includes correct placeholder text' do
-      expect(response.body).to include('List of posts')
+      expect(response.body).to include('Pagination')
     end
   end
 
   describe 'GET #show' do
-    before(:example) { get user_post_path(user_id: 10, id: 10) }
+    before(:example) { get user_post_path(user_id: 316, id: 47) }
 
     it 'returns http success status' do
       expect(response).to have_http_status(:ok)
