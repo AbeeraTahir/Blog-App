@@ -2,8 +2,8 @@ require_relative '../rails_helper'
 
 RSpec.describe Post, type: :model do
   subject do
-    Post.new(title: 'AI', text: 'Great post', comments_counter: 1, likes_counter: 1,
-             author_id: 7)
+    user = User.new(name: 'Rose', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Doctor', posts_counter: 1)
+    Post.new(title: 'AI', text: 'Great post', comments_counter: 1, likes_counter: 1, author: user)
   end
 
   before { subject.save }

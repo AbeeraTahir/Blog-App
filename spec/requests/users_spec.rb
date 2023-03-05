@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'UsersController', type: :request do
+  subject { @user = User.create(name: 'Rose', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Doctor', posts_counter: 1) }
+
+  before { subject.save }
   describe 'GET #index' do
     before(:example) { get users_path }
 
@@ -13,12 +16,12 @@ RSpec.describe 'UsersController', type: :request do
     end
 
     it 'response body includes correct placeholder text' do
-      expect(response.body).to include('List of users:')
+      expect(response.body).to include(@user.name)
     end
   end
 
   describe 'GET #show' do
-    before(:example) { get user_path(id: 316) }
+    before(:example) { get user_path(id: @user.id) }
 
     it 'returns http success status' do
       expect(response).to have_http_status(:ok)
@@ -29,7 +32,7 @@ RSpec.describe 'UsersController', type: :request do
     end
 
     it 'response body includes correct placeholder text' do
-      expect(response.body).to include('Bio')
+      expect(response.body).to include(@user.name)
     end
   end
 end
