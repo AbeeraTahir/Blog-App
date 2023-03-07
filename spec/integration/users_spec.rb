@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'User Page', type: :feature do
+RSpec.describe 'User testing', type: :feature do
   describe 'index page' do
     before(:example) do 
       @user = User.create(name: 'Abeera', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Developer', posts_counter: 1)
