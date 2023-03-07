@@ -17,6 +17,7 @@
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgements](#acknowledgements)
   - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
@@ -105,7 +106,7 @@ To run the project, execute the following command:
 
 <!-- AUTHORS -->
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Abeera Tahir**
 
@@ -113,13 +114,19 @@ To run the project, execute the following command:
 - Twitter: [@AbeeraTahir8](https://twitter.com/AbeeraTahir8?t=z5CjMpmHMZmS98i09gUpYA&s=08)
 - LinkedIn: [Abeera Tahir](https://www.linkedin.com/in/abeera-tahir/)
 
+
+👤 **Zia Bakhteyari**
+
+- GitHub: [@zia123456](https://github.com/Zia123456)
+- Twitter: [@zia_bakhteyari](https://twitter.com/Zia_Bakhteyari)
+- LinkedIn: [Zia bakhteyari](https://www.linkedin.com/in/zia-bakhteyari)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add Devise
 - Add authorization rules
 - Add API endpoints
 
@@ -140,6 +147,14 @@ Feel free to check the [issues page](../../issues/).
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project and want to support me make cooler projects Give this project a Star.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank Microverse community.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
