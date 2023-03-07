@@ -6,7 +6,9 @@
   </div>
   <div class="posts">
     <% @recent_posts.each do |post| %>
-      <%= render "shared/post", post: post %>
+      <%= link_to user_post_path(user_id: post.author.id, id: post.id), class: "post" do %>
+        <%= render "shared/post", post: post %>
+      <% end %>
     <% end %>
   </div>
   <button type="button" class="btn"><%= link_to "See all posts", user_posts_path(@user)  %></button>
