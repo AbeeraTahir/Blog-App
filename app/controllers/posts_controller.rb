@@ -29,6 +29,18 @@ class PostsController < ApplicationController
     @like = Like.new
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+
+    if @post.destroy
+      flash[:notice] = 'Post deleted successfully!'
+      redirect_to user_posts_path(current_user)
+    else
+      flash[:alert] = @post.errors.full_messages.first if @post.errors.any?
+      render :show, status: 400
+    end
+  end
+
   private
 
   def post_params
