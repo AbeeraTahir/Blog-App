@@ -126,3 +126,7 @@ section {
 .links {
   gap: 0;
 }
+
+.delete-btn {
+  align-self: flex-end;
+}
