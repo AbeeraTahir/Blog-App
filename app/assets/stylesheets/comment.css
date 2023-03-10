@@ -7,3 +7,9 @@
 .form-text {
   height: 90px;
 }
+
+.comment-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

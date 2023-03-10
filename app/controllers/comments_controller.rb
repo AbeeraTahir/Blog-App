@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
+
   def new
     @comment = Comment.new
   end
@@ -13,6 +15,18 @@ class CommentsController < ApplicationController
     else
       flash[:alert] = "Couln't add Comment!"
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+
+    if @comment.destroy
+      flash[:notice] = 'Comment deleted successfully!'
+      redirect_to user_post_path(user_id: current_user.id, id: @comment.post_id)
+    else
+      flash[:alert] = @comment.errors.full_messages.first if @comment.errors.any?
+      render :show, status: 400
     end
   end
 

@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.includes([:posts]).find(params[:user_id])
     @posts = @user.posts.includes([:comments]).order(created_at: :asc)
@@ -25,6 +27,18 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @like = Like.new
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+
+    if @post.destroy
+      flash[:notice] = 'Post deleted successfully!'
+      redirect_to user_posts_path(current_user)
+    else
+      flash[:alert] = @post.errors.full_messages.first if @post.errors.any?
+      render :show, status: 400
+    end
   end
 
   private

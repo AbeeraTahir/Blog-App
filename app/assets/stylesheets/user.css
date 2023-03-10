@@ -52,7 +52,10 @@ img {
 }
 
 .like-comment {
-  text-align: end;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
 }
 
 .like-comment p {

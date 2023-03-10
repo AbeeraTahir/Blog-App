@@ -3,5 +3,8 @@
   <p><%= truncate(post.text, length: 150, omission: "...") %></p>
   <div class="like-comment">
     <p>Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p> 
+    <% if can? :delete, post %>
+      <button type="button" class="btn delete-btn"><%= link_to "Delete Post", user_post_path(user_id: post.author.id, id: post.id), data: { turbo_method: :delete } %></button>
+    <% end %>
   </div>
 </div>
