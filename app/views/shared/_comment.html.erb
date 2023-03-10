@@ -3,7 +3,9 @@
 <% else %>
   <% post.recent_comments.each do |comment| %>
     <ul>
-      <li><%= comment.author.name %>: <%= comment.text %></li>
+      <li class="comment-list">
+        <%= comment.author.name %>: <%= comment.text %>
+      </li>
     </ul>
   <% end %>
 <% end %>
