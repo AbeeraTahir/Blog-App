@@ -1,0 +1,67 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/users/{user_id}/posts/{post_id}/comments":
+    get:
+      summary: Fetch all comments for a post
+      tags:
+      - Comments
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        description: ID of the user who authored the post
+        schema:
+          type: integer
+      - name: post_id
+        in: path
+        required: true
+        description: ID of the post for which comments are to be fetched
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: returns all comments for the given post
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    text:
+                      type: string
+                    author_id:
+                      type: integer
+                    post_id:
+                      type: integer
+                  required:
+                  - id
+                  - text
+                  - author_id
+                  - post_id
+  "/api/v1/users/{user_id}/posts":
+    get:
+      summary: Returns a list of posts for the given user
+      tags:
+      - Posts
+      parameters:
+      - name: user_id
+        in: path
+        description: ID of the user to fetch posts for
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: posts found
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
