@@ -127,8 +127,8 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add authorization rules
-- Add API endpoints
+- Add log out feature
+- Improve UI
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
